@@ -25,6 +25,11 @@ const common = {
         test: /\.jsx?$/,
         loaders: ['babel'],
         include: PATHS.app
+      },
+      {
+        test: /\.less$/,
+        loaders: ['style!css!less'],
+        include: PATHS.app
       }
     ]
   },
