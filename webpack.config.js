@@ -28,7 +28,7 @@ const common = {
       },
       {
         test: /\.less$/,
-        loaders: ['style!css!less'],
+        loader: 'style!css!less',
         include: PATHS.app
       }
     ]
@@ -52,7 +52,9 @@ if (TARGET === 'start' || !TARGET) {
       port: process.env.PORT
     },
     plugins: [
-      new webpack.HotModuleReplacementPlugin()
+      new webpack.HotModuleReplacementPlugin(),
+      new webpack.optimize.DedupePlugin(),
+      new webpack.optimize.AggressiveMergingPlugin()
     ]
   })
 }

@@ -1,11 +1,12 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-import App from './components/app'
+import Editor from './components/editor'
 
 import './styles/index.less'
 
 let appNode = document.createElement('div')
+appNode.setAttribute('style', 'height: 100%')
 document.body.appendChild(appNode)
 
-ReactDOM.render(<App />, appNode)
+ReactDOM.render(<Editor />, appNode)
